@@ -16,7 +16,14 @@
 
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
-
+		<link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+		<style type="text/css">
+		html,body
+		{
+			font-family: 'Ubuntu', sans-serif;
+		}
+		</style>
+		<base target="_blank">
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
 
@@ -41,30 +48,45 @@
 		<div class="reveal">
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section data-background="#8c4738">
+				<section data-background="#385D8C">
 					<h1>Web Components</h1>
 					<h2>The Future Web</h2>
 					<p>
 						<a target="_blank" href="http://goo.gl/Nh8jd9">http://goo.gl/Nh8jd9</a><br/>
-						<a href="http://twitter.com/arvindr21" target="_blank">@arvindr21</a>
+						<a href="http://twitter.com/arvindr21" target="_blank" class="image">
+							<img src="img/twitter.png">
+						</a>
+						<a href="http://github.com/arvindr21" target="_blank" class="image">
+							<img src="img/github.png">
+						</a>
+						<a href="http://thejackalofjavascript.com" target="_blank" class="image">
+							<img src="img/blog.png">
+						</a>
+
+
 					</p>
 				</section>
-				<section data-background="#8c4738">
+				<section data-background="#385D8C">
 					<h2>How are we developing?</h2>
+					<br/>
 					<p>Let's say you want a build a page like</p>
+					
 					<img src="img/sample_webpage.png">
 				</section>
-				<section data-background="#8c4738">
-					<h2>Day to Day approach</h2>
+				<section data-background="#385D8C">
+					<h2>Day to Day Approach</h2>
+					<br/>
 					<ol>
 						<li>Go to getbootstrap.com</li>
 						<li>Get the CDN links for CSS and JS</li>
 						<li>Copy the Starter Template and Make Changes</li>
 					</ol>
 				</section>
-				<section data-background="#8c4738">
+				<section data-background="#385D8C">
 					<h2>What about plugins?</h2>
+					<br/>
 					<p>Say a Date Picker..</p>
+					<br/>
 					<ol>
 						<li>Go to jqueryui.com</li>
 						<li>Download the source example</li>
@@ -72,8 +94,8 @@
 					</ol>
 				</section>
 
-				<section data-background="#8c4738">
-					<h2>Primary problem?</h2>
+				<section data-background="#385D8C">
+					<h2>Primary problem</h2>
 					<br/>
 					<h5>Namespace collision</h5>
 						<pre><code data-trim>
@@ -92,13 +114,15 @@
 }
 					</code></pre>
 				</section>
-				<section data-background="#8c4738">
-					<h2 style="margin-top:25%;">How can we solve this in a better way?</h2>					
+				<section data-background="#385D8C">
+					<h3 style="margin-top:18%;">iFrames???</h3><br/><br/>
+					<h3 class="fragment">How can we solve this in a better way?</h3>					
 				</section>
-				<section data-background="#8c4738">
+				<section data-background="#385D8C">
 					<h2>Just Imagine</h2>
+					<br/>
 					<p>
-					If you can write a tag like this
+					If you can write a tag like
 						<pre><code data-trim>
 <date-picker 
 	data-start="today" 
@@ -107,7 +131,7 @@
 					and a date picker will be generated for you
 					</p>
 					<p>
-					Or
+					Or this
 						<pre><code>
    <bootstrap-nav-inverse>
    	   <proj>My Project</proj>
@@ -116,29 +140,43 @@
    	   <link>Contact&lt;/link>
    </bootstrap-nav-inverse>
 						</code></pre>
-					And a Bootstrap Inverse Navbar will be placed
+					And a Bootstrap Inverse Navbar will be scaffolded
 					</p>
 					<h3>Or even better..</h3>
 				</section>
-				<section data-background="#8c4738">
+				<section data-background="#385D8C">
 					<h2>&lt;gangnam-style>&lt;/gangnam-style></h2>
 					<p>
 					<iframe src="http://html5-demos.appspot.com/static/webcomponents/demos/components/my-components/gangnam.html" style="height:251px;"></iframe>
 					</p>
+				</section>				
+				<section data-background="#385D8C">
+					<h2>More Realistic</h2><br/>
+					<h3>&lt;twitter-button>&lt;/twitter-button></h3> <br/><br/>
+					<p>
+					<iframe src="http://zenorocha.github.io/twitter-button/" style="height:251px; width:521px;"></iframe>
+					</p>
 				</section>
-				<section data-background="#8c4738">
+				<section data-background="#385D8C">
+					<h2>One More</h2><br/>
+					<h3>&lt;dropbox-button>&lt;/dropbox-button></h3><br/><br/>
+					<p>
+					<iframe src="http://kashiro.github.io/dropbox-button" style="height:251px; width:521px;"></iframe>
+					</p>
+				</section>
+				<section data-background="#385D8C">
 					<h2>How can we achieve this?</h2>
-					<p class="fragment">
-						Surpise!! Surpise!!						
+					<br/>
+					<p>
+						<h3 class="fragment">Surpise!! Surpise!!</h3>						
+						<p class="fragment">This is already present in our browser</p>						
 					</p>
-					<p class="fragment">
-						This is already present in our browser						
-					</p>
-					<p class="fragment">
+					<br/>
+					<h3 class="fragment">
 						What do I mean?						
-					</p>
+					</h3>
 				</section>
-				<section data-background="#8c4738">
+				<section data-background="#385D8C">
 					<h2>Have you ever wondered?</h2>
 					<p>
 					<input class="ex-t" type="text" placeholder="Inspect Me!!">
@@ -146,8 +184,9 @@
 					</p>
 				</section>
 
-				<section data-background="#8c4738">
+				<section data-background="#385D8C">
 					<h2>Something Bigger?</h2>
+					<br/>
 					<p>
 
 						<video width="320" height="240" controls>
@@ -165,44 +204,52 @@
 
 						</code></pre>
 
-					</p>
+					</p><br/>
 					<h3>How can we do this?</h3>
 				</section>
-				<section data-background="#8c4738">
+				<section data-background="#385D8C">
 					<h2>Web Components</h2>
 					</br>
 					<blockquote style="width:1008px;">
 						Web Components  === Write your own HTML tags & behaviours	
 					</blockquote>
 				</section>
-				<section data-background="#8c4738">
+				<section data-background="#385D8C">
 					<h2>Web Components</h2>
 					<p>Are built using 4 key pieces</p></br>
-					<ul style="list-style:none; text-align:center; padding-left:0px; margin-left:0px;">
+					<ul style="list-style:none; text-align:center; padding-left:0px; margin-left:0px;" class="roller">
 						<li><h3><a target="_blank" href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html">HTML Templates</a></h3></li>
 						<li><h3><a target="_blank" href="http://w3c.github.io/webcomponents/spec/shadow/">Shadow DOM</a></h3></li>	
 						<li><h3><a target="_blank" href="http://w3c.github.io/webcomponents/spec/custom/">Custom Elements</a></h3></li>
 						<li><h3><a target="_blank" href="http://w3c.github.io/webcomponents/spec/imports/">HTML Imports</a></h3></li>
 					</ul>
 				</section>
-				<section data-background="#8c4738">
+				<section data-background="#385D8C">
 					<h2>Browser Support</h2>
 					<p>
 						<img src="img/browser_support.png">						
 					</p>
-					<a href="http://jonrimmer.github.io/are-we-componentized-yet/" target="_blank">Source</a>
+					<a href="http://jonrimmer.github.io/are-we-componentized-yet/" target="_blank">More Details</a>
 				</section>
 
-				<section data-background="#8c4738">
+				<section data-background="#385D8C">
 					<h2>Polyfills</h2>
 					<br/>
-					<ul style="list-style:none; text-align:center; padding-left:0px; margin-left:0px;">
+					<ul style="list-style:none; text-align:center; padding-left:0px; margin-left:0px;" class="roller roller2">
 					<li><a href="http://www.polymer-project.org/" target="_blank">Polymer</a></li>
 					<li><a href="http://bosonic.github.io/" target="_blank">Bosonic</a></li>
 					<li><a href="http://x-tags.org/" target="_blank">x-tag</a></li>
 					</ul>
 				</section>
-				<section data-background="#8c4738">
+				<section data-background="#385D8C">
+					<ul style="list-style:none; text-align:center; padding-left:0px; margin-left:0px; margin-top:14%;" class="roller">
+						<li class="active"><h3><a target="_blank" href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html">HTML Templates</a></h3></li>
+						<li><h3><a target="_blank" href="http://w3c.github.io/webcomponents/spec/shadow/">Shadow DOM</a></h3></li>	
+						<li><h3><a target="_blank" href="http://w3c.github.io/webcomponents/spec/custom/">Custom Elements</a></h3></li>
+						<li><h3><a target="_blank" href="http://w3c.github.io/webcomponents/spec/imports/">HTML Imports</a></h3></li>
+					</ul>
+				</section>
+				<section data-background="#385D8C">
 					<h2>HTML TEMPLATES</h2>
 					<ul>
 						<li>In simple terms, these are just 
@@ -230,13 +277,13 @@
 						</li>
 					</ul>
 				</section>
-				<section data-background="#8c4738">
-					<h2>While Developing</h2>
+				<section data-background="#385D8C">
+					<h2>While Developing</h2><br/>
 					<p>
 						Encapsulate HTML will be stored here
 					</p>					
 					<p>
-					<pre><code><template id="myTemplate">
+					<pre style="max-height:500px;"><code style="max-height:500px;"><template id="myTemplate">
    <img src="image.png">
    <audio controls>
       <source src="audio.ogg" type="audio/ogg">
@@ -244,6 +291,7 @@
       Your browser does not support the audio tag.
    </audio>
 </template>
+
 <script>
    // Get the template content
    var content = document.querySelector('#myTemplate').content;
@@ -257,6 +305,180 @@
 					</p>
 					
 				</section>
+				<section data-background="#385D8C">
+					<ul style="list-style:none; text-align:center; padding-left:0px; margin-left:0px; margin-top:14%;" class="roller">
+						<li class="active"><h3><a target="_blank" href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html">HTML Templates</a></h3></li>
+						<li class="active"><h3><a target="_blank" href="http://w3c.github.io/webcomponents/spec/shadow/">Shadow DOM</a></h3></li>	
+						<li><h3><a target="_blank" href="http://w3c.github.io/webcomponents/spec/custom/">Custom Elements</a></h3></li>
+						<li><h3><a target="_blank" href="http://w3c.github.io/webcomponents/spec/imports/">HTML Imports</a></h3></li>
+					</ul>
+				</section>
+				<section data-background="#385D8C">
+					<h2>SHADOW DOM</h2> <br/>
+					<ul>
+						<li>Encapsulate Markup, Styles and Scripts</li>
+						<li>Restricts the visibility and accessibility of content/code of an Object to the Outside World</li>
+						<li>Markup Boundary</li>
+						<li>Style Boundary</li>
+						<li>Script Boundary</li>
+					</ul>
+				</section>
+				<section data-background="#385D8C">
+				<h2>Example</h2><br/>
+				<pre><code><template id="uppercase">
+   <style>
+      :host { display: block; }
+      .wrapper{border:1px solid; padding: 9px;}
+      .text{color: red;}
+   </style>
+   <div class="wrapper">
+      <div class="text">
+         This will appear in uppercase!!
+      </div>
+   </div>
+</template></code></pre>
+<h3>And when time comes</h3>
+<pre><code>&lt;script>
+  // the element on page
+  var textShadow = document.querySelector('#uppercase-ele')
+                           .createShadowRoot();
+  var template = document.querySelector('#uppercase'); 
+  textShadow.appendChild(template.content.toUpperCase());
+&lt;/script></pre></code>
+
+				</section>
+				<section data-background="#385D8C">
+				<h2>How does it work?</h2>
+				<br/>
+				<img src="http://thejackalofjavascript.com/wp-content/uploads/2014/03/Screen-Shot-2014-03-28-at-12.10.01-pm-451x231.png" style="width:899px;">
+				</section>
+				<section data-background="#385D8C">
+				<h2>And</h2>
+				<br/>
+				<img src="http://thejackalofjavascript.com/wp-content/uploads/2014/03/Screen-Shot-2014-03-28-at-12.10.12-pm-451x293.png" style="width:699px;">
+				</section>				
+				<section data-background="#385D8C">
+				<h2>Finally</h2>
+				<br/>
+				<pre><code><div id="uppercase-ele">
+<!-- Shadow Root -->
+     <div class="wrapper">
+      <div class="text">
+         THIS WILL APPEAR IN UPPERCASE
+      </div>
+   </div>
+<!-- Shadow Root -->
+</div></pre></code>
+<br/><br/>
+<h3>~~ SHADOW DOM ~~</h3>
+				</section>
+				<section data-background="#385D8C">
+					<ul style="list-style:none; text-align:center; padding-left:0px; margin-left:0px; margin-top:14%;" class="roller">
+						<li class="active"><h3><a target="_blank" href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html">HTML Templates</a></h3></li>
+						<li class="active"><h3><a target="_blank" href="http://w3c.github.io/webcomponents/spec/shadow/">Shadow DOM</a></h3></li>	
+						<li class="active"><h3><a target="_blank" href="http://w3c.github.io/webcomponents/spec/custom/">Custom Elements</a></h3></li>
+						<li><h3><a target="_blank" href="http://w3c.github.io/webcomponents/spec/imports/">HTML Imports</a></h3></li>
+					</ul>
+				</section>
+				<section data-background="#385D8C">
+				<h2>Custom Elements</h2>
+				</br>
+					<blockquote style="width:1008px;" class="fragment">				
+					TagName(HTML Templates + Shadow DOM) = Custom Elements
+					</blockquote>
+					<div class="fragment">
+					<br/><br/>
+					Instead of 
+					<pre><code><div id="uppercase-ele">Capitalize Me</div></code></pre>
+					This would look more Semantic-ish
+					<pre><code><upper-case>Capitalize Me</upper-case></code></pre>
+					</div>
+				</section>
+				<section data-background="#385D8C">
+				<h2>Creating Custom Elements</h2>
+				<br/><ul>
+				<li>We use <code>registerElement()</code> to create a new element</li>
+				<li>The tag name must have a <code>-</code> (dash)</li>	
+				</ul>
+				<div class="fragment">
+				<br/><br/>
+				<h3>Example</h3>
+					<pre><code>var customButton = document.registerElement('custom-button', {
+  prototype: Object.create(HTMLButtonElement.prototype),
+  extends: 'button'
+});</code></pre>
+				</div>
+
+				</section>
+				<section data-background="#385D8C">
+				<h2>Events</h2><br/>
+				<ul style="width:999px;">
+				<li><code>createdCallback</code> -- Custom Element created</li>
+				<li><code>attachedCallback</code> -- Custom Element Attached to DOM</li>
+				<li><code>detachedCallback</code> --  Custom Element Removed from DOM</li>
+				<li><code>attributeChangedCallback</code> -- Custom Element Added or Updated or Removed</li>
+				</ul>
+				</section>
+
+				<section data-background="#385D8C">
+				<h2>Sample Init</h2><br/>
+				<pre style="width:1099px; max-height:500px;"><code style="max-height:500px;">var obj = {
+  createdCallback: function(){
+   var shadow = this.createShadowRoot();
+   var template = document.querySelector('#message');
+   shadow.appendChild(template.content);
+  },
+
+  attachedCallback : function(){
+    console.log("attached Callback");
+  },
+
+  detachedCallback : function(){
+    console.log("detached Callback");
+  },
+
+  attributeChangedCallback : function(attrName, oldVal, newVal){
+    console.log("attrname : "+attrname+" :: oldval : "+oldVal+" :: newval : "+newVal)
+  }
+}</code></pre>
+<pre><code>var customPrototype = Object.create(HTMLElement.prototype, obj);</code></pre>
+<pre style="width:1099px;"><code>var upperCase = document.registerElement('upper-case', {prototype: customPrototype});</code></pre>
+				</section>
+				<section data-background="#385D8C">
+					<ul style="list-style:none; text-align:center; padding-left:0px; margin-left:0px; margin-top:14%;" class="roller">
+						<li class="active"><h3><a target="_blank" href="https://dvcs.w3.org/hg/webcomponents/raw-file/tip/spec/templates/index.html">HTML Templates</a></h3></li>
+						<li class="active"><h3><a target="_blank" href="http://w3c.github.io/webcomponents/spec/shadow/">Shadow DOM</a></h3></li>	
+						<li class="active"><h3><a target="_blank" href="http://w3c.github.io/webcomponents/spec/custom/">Custom Elements</a></h3></li>
+						<li class="active"><h3><a target="_blank" href="http://w3c.github.io/webcomponents/spec/imports/">HTML Imports</a></h3></li>
+					</ul>
+				</section>
+				<section data-background="#385D8C">
+				<h3>HTML Imports</h3><br/>
+				<ul style="max-width:1099px;">
+				<li>Importing HTML into a page</li>
+				<li>To Externalize the component and make it reusable</li>				
+				</ul>
+				<pre><code> <link rel="import" href="/templates/upper-case.html"></code></pre>
+				<br/><h3>Loading Events</h3>
+				<pre><code><script async>
+  function handleLoad(e) {
+    console.log('Loaded import: ' + e.target.href);
+  }
+  function handleError(e) {
+    console.log('Error loading import: ' + e.target.href);
+  }
+</script></code></pre>
+				</section>
+				<section data-background="#385D8C">
+					<h2  style="margin-top:21%;"><a href="https://github.com/arvindr21/myWebComponents">Demo</a></h2>
+				</section>
+				<section data-background="#385D8C">
+					<h2  style="margin-top:21%;">Questions?</h2>
+				</section>
+				<section data-background="#385D8C">
+					<h2  style="margin-top:21%;">Thanks!</h2>
+				</section>
+
 			</div>
 
 		</div>
