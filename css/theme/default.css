@@ -212,3 +212,13 @@ a.image:hover
 } 
 
 ::selection {color:#333;background:#efefef;}
+
+.last-links a
+{
+  border-bottom: 1px dashed;
+}
+
+.last-links a:hover
+{
+  border-bottom: none;
+}
